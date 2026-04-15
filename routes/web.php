@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\EleveController;
+use App\Http\Controllers\EtudiantController;
+use App\Http\Controllers\FiliereController;
 use Illuminate\Support\Facades\Route;
 
 // Page d'accueil
@@ -12,3 +14,6 @@ Route::get('/', function () {
 Route::resource('eleves', EleveController::class)->parameters([
     'eleves' => 'eleve'
 ]);
+
+Route::resource('etudiants', EtudiantController::class);
+Route::resource('filieres', FiliereController::class);
